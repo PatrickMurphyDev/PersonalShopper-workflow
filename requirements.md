@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document provides a comprehensive analysis of all system requirements, dependencies, and package configurations for the News Synthesizer application. All dependencies have been carefully selected and verified for compatibility across backend and frontend components.
+This document provides a comprehensive analysis of all system requirements, dependencies, and package configurations for the PersonalShopper application. All dependencies have been carefully selected and verified for compatibility across backend and frontend components.
 
 ## System Requirements
 
@@ -27,24 +27,10 @@ This document provides a comprehensive analysis of all system requirements, depe
 - **GPU Support**: CUDA 11.8+ (NVIDIA drivers)
 
 #### Development Environment
-- **Python**: 3.11+ (with pip and virtualenv)
 - **Node.js**: 18.17+ (LTS)
 - **Git**: Latest stable version
 
 ## Backend Dependencies Analysis
-
-### Core Python Environment
-
-#### Python Version and Virtual Environment
-```bash
-# Required Python version
-python_version = "3.11+"
-
-# Recommended virtual environment setup
-python -m venv news_synthesizer_env
-source news_synthesizer_env/bin/activate  # Linux/macOS
-# news_synthesizer_env\Scripts\activate  # Windows
-```
 
 ### Main Dependencies
 
@@ -84,28 +70,6 @@ pip install llama-cpp-python \
     --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu118
 ```
 
-#### RSS Processing and Content Extraction
-```
-feedparser==6.0.10         # Robust RSS/Atom feed parsing
-newspaper3k==0.2.8         # Article content extraction and cleaning
-lxml==4.9.3               # XML/HTML parsing (required by newspaper3k)
-```
-
-**Compatibility Notes**:
-- feedparser: Lightweight, handles malformed feeds gracefully
-- newspaper3k: For full article content extraction (beyond RSS summaries)
-- lxml: Faster XML parsing compared to Python's built-in ElementTree
-
-#### Text-to-Speech
-```
-edge-tts==6.1.10          # Microsoft Edge TTS engine integration
-```
-
-**Compatibility Notes**:
-- Asynchronous operation compatible with FastAPI
-- Supports multiple voices and languages
-- Requires internet connection for TTS generation
-
 #### HTTP Client and Async Operations
 ```
 aiohttp==3.9.1           # Async HTTP client for concurrent requests
@@ -117,39 +81,6 @@ yarl==1.9.2             # URL manipulation library (aiohttp dependency)
 - Essential for concurrent RSS feed fetching
 - yarl for URL object manipulation
 
-#### Data Processing and NLP
-```
-scikit-learn==1.3.2      # Machine learning utilities
-sentence-transformers==2.2.2  # Text embeddings for RAG
-transformers==4.35.2     # Hugging Face transformers (if needed for embeddings)
-torch==2.1.1            # PyTorch for ML operations (if not using GPU)
-accelerate==0.25.0       # Library for CPU/GPU acceleration
-```
-
-**Compatibility Notes**:
-- scikit-learn for potential clustering/classification
-- sentence-transformers for semantic text similarity
-- torch CPU-only version to avoid GPU conflicts unless CUDA available
-
-#### Data Serialization and Validation
-```
-pydantic==2.5.0          # Data validation and parsing
-pydantic-core==2.14.5    # Core validation engine
-```
-
-**Compatibility Notes**:
-- Pydantic v2 (not v1) for better FastAPI integration
-- Provides runtime type checking and validation
-- Essential for API request/response models
-
-#### Configuration and Serialization
-```
-pyyaml==6.0.1           # YAML configuration file handling
-```
-
-**Compatibility Notes**:
-- For reading RSS feeds config and persona definitions
-- Human-readable configuration format
 
 #### Development and Testing
 ```
@@ -306,14 +237,6 @@ zod==3.22.4              # Schema validation library
 **Compatibility Notes**:
 - Runtime and compile-time type validation
 - Seamless integration with TypeScript
-
-### Audio Handling
-```
-@types/dom-mediacapture-transform==0.1.7  # Type definitions for audio APIs
-```
-
-**Compatibility Notes**:
-- Only type definitions needed - browser-native Audio API used
 
 ### Development and Build Tools
 ```
