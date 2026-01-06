@@ -1,21 +1,4 @@
-# 🔄 Workflow Template
-
-[![GitHub stars](https://img.shields.io/github/stars/kliewerdaniel/workflow.svg)](https://github.com/kliewerdaniel/workflow/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/kliewerdaniel/workflow.svg)](https://github.com/kliewerdaniel/workflow/network)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub issues](https://img.shields.io/github/issues/kliewerdaniel/workflow.svg)](https://github.com/kliewerdaniel/workflow/issues)
-[![Documentation](https://img.shields.io/badge/docs-complete-brightgreen.svg)](https://github.com/kliewerdaniel/workflow#readme)
-
 A comprehensive, reusable documentation template that transforms how you build software. Developed using AI-assisted workflows, this framework provides structured guidance for software development with modular documentation that adapts to any project type.
-
-## ✨ Features
-
-- **📚 Complete Documentation Framework** - Ready-to-use templates for planning, development, testing, and deployment
-- **🤖 AI-Assisted Development** - Optimized for AI collaboration with structured prompts and guidelines
-- **🎯 Modular Architecture** - Department-based approach mimicking software agencies for systematic development
-- **🔧 Technology Agnostic** - Adaptable templates for any programming language, framework, or project type
-- **📖 Learning Resource** - Educational examples showing best practices in software development
-- **🚀 Quick Start** - Fork and customize for your next project in minutes
 
 ## 📋 What's Included
 
